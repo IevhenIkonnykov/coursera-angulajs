@@ -30,7 +30,6 @@
         if (quantity == 0) {
           $scope.message = 'Do not you eat at all?';
         }
-        }
       }
     }
   }
