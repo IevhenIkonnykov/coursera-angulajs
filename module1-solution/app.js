@@ -24,7 +24,7 @@
         if (quantity > 3) {
           $scope.message = 'Too much!';
         }
-        if (quantity > 0 && quantity < 3) {
+        if (quantity > 0 && quantity < 4) {
           $scope.message = 'Enjoy!';
         }
         if (quantity == 0) {
