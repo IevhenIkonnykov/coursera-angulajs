@@ -23,8 +23,13 @@
         }
         if (quantity > 3) {
           $scope.message = 'Too much!';
-        } else {
-          $scope.message = 'Enjoy!'
+        }
+        if (quantity > 0 && quantity < 3) {
+          $scope.message = 'Enjoy!';
+        }
+        if (quantity == 0) {
+          $scope.message = 'Do not you eat at all?';
+        }
         }
       }
     }
