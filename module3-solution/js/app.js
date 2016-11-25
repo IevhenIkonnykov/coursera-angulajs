@@ -11,7 +11,7 @@
     var ctrl = this;
     ctrl.found = [];
     ctrl.term = "";
-    ctrl.error = false;
+    // ctrl.error = false;
 
     ctrl.find = function(){
       if (ctrl.term == ''){
