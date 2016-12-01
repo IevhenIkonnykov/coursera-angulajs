@@ -16,7 +16,6 @@ function MenuDataService($http) {
         // List of all categories
         var categories = [];
         categories = result.data;
-        console.log(categories)
         // return  categories
         return categories;
       })
@@ -28,11 +27,10 @@ function MenuDataService($http) {
         url: "https://davids-restaurant.herokuapp.com/menu_items.json?category=" + categoryShortName
       })
       .then(function (result) {
-        // List of all categories
         // List of items for a category
         var items = [];
         items = result.data.menu_items;
-        // return  categories
+        // return  items
         return items;
       })
     )};
