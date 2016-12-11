@@ -1,0 +1,16 @@
+<div class="container" style="color :#557c3e">
+  <ul class="list-group" ng-if="userInfoCtrl.registrationStatus">
+    <li class="list-group-item">User first name: {{userInfoCtrl.user.firstName}}</li>
+    <li class="list-group-item">User last name: {{userInfoCtrl.user.lastName}}</li>
+    <li class="list-group-item">User E-mail: {{userInfoCtrl.user.email}}</li>
+    <li class="list-group-item">User phone number: {{userInfoCtrl.user.phoneNumber}}</li>
+    <li class="list-group-item">Menu title: {{userInfoCtrl.user.menuTitle}}</li>
+    <li class="list-group-item"><img ng-src="images/menu/{{userInfoCtrl.user.categoryShortName}}/{{userInfoCtrl.user.categoryShortName}}.jpg" alt="#"> </li>
+    <li class="list-group-item">Description: {{userInfoCtrl.user.menuDescription}}</li>
+  </ul>
+
+  <span ng-if="!userInfoCtrl.registrationStatus" style="color :#fff">
+        Not Signed Up Yet.
+        <a ui-sref="signup" style="color :#fff">Sign up Now!</a>
+  </span>
+</div>

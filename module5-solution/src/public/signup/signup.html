@@ -1,0 +1,64 @@
+<div class="container">
+  <form name='regForm' novalidate>
+    <div class="form-group">
+      <label for="firstName">First name</label>
+      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name"
+      ng-model=signupCtrl.firstName
+      required>
+      <span
+          ng-if="regForm.firstName.$invalid && regForm.firstName.$touched">
+          Please input your first name
+      </span>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last name</label>
+      <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name"
+      ng-model=signupCtrl.lastName
+      required>
+      <span
+          ng-if="regForm.lastName.$invalid && regForm.lastName.$touched">
+          Please input your last name
+      </span>
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="E-mail"
+      ng-model=signupCtrl.email
+      required>
+      <span
+          ng-if="regForm.email.$invalid && regForm.email.$touched">
+          Please input your email
+      </span>
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Phone number</label>
+      <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone number"
+      ng-model=signupCtrl.phoneNumber
+      required>
+      <span
+          ng-if="regForm.phoneNumber.$invalid && regForm.phoneNumber.$touched">
+          Please input your phone number
+      </span>
+    </div>
+    <div class="form-group">
+      <label for="favouriteDish">Menu number</label>
+      <input type="text" class="form-control" id="favouriteDish" name="favouriteDish" placeholder="Menu number of your favourite dish"
+      ng-model=signupCtrl.menuNumber
+      required>
+      <span
+          ng-if="regForm.favouriteDish.$invalid && regForm.favouriteDish.$touched">
+          Please input menu number
+      </span>
+      <span ng-if="signupCtrl.menuNumberError">
+            No such menu number exists
+      </span>
+    </div>
+    <button type="submit" class="btn btn-primary"
+    ng-click="signupCtrl.submit()"
+    ng-disabled="regForm.$invalid">Submit</button>
+  </form>
+
+  <span ng-if="signupCtrl.saveStatus">
+        Your information has been saved
+  </span>
+</div>
